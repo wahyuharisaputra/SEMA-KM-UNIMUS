@@ -102,32 +102,47 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.program-kerja.index') }}" class="nav-link {{ request()->routeIs('admin.program-kerja.*') ? 'active' : '' }}">
                     <i class="bi bi-calendar-check"></i> Program Kerja
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link">
-                    <i class="bi bi-diagram-3"></i> Struktur Organisasi
+                <a href="{{ route('admin.divisi.index') }}" class="nav-link {{ request()->routeIs('admin.divisi.*') ? 'active' : '' }}">
+                    <i class="bi bi-building"></i> Divisi / Bidang
                 </a>
             </li>
             <li>
                 <a href="#" class="nav-link">
-                    <i class="bi bi-images"></i> Galeri
+                    <i class="bi bi-diagram-3"></i> Pengurus Organisasi
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.album-galeri.index') }}" class="nav-link {{ request()->routeIs('admin.album-galeri.*') ? 'active' : '' }}">
+                    <i class="bi bi-folder-fill"></i> Album Galeri
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('admin.galeri.index') }}" class="nav-link {{ request()->routeIs('admin.galeri.*') ? 'active' : '' }}">
+                    <i class="bi bi-images"></i> Galeri Foto
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('admin.dokumen.index') }}" class="nav-link {{ request()->routeIs('admin.dokumen.*') ? 'active' : '' }}">
                     <i class="bi bi-file-earmark-pdf"></i> Dokumen Publik
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.aspirasi.index') }}" class="nav-link {{ request()->routeIs('admin.aspirasi.*') ? 'active' : '' }}">
                     <i class="bi bi-chat-square-text"></i> Aspirasi
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.pesan.index') }}" class="nav-link {{ request()->routeIs('admin.pesan.*') ? 'active' : '' }}">
+                    <i class="bi bi-envelope"></i> Pesan Kontak
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('admin.pengaturan.index') }}" class="nav-link {{ request()->routeIs('admin.pengaturan.*') ? 'active' : '' }}">
                     <i class="bi bi-gear"></i> Pengaturan
                 </a>
             </li>

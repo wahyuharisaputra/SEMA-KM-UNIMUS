@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Dokumen extends Model
 {
-    //
+    protected $fillable = ['judul', 'file_dokumen', 'tipe', 'ukuran'];
 }

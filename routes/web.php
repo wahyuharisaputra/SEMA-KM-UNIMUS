@@ -45,6 +45,18 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
     Route::name('admin.')->group(function () {
         Route::resource('kategori-berita', \App\Http\Controllers\Admin\KategoriBeritaController::class)->parameters(['kategori-berita' => 'kategori']);
         Route::resource('berita', \App\Http\Controllers\Admin\BeritaController::class)->parameters(['berita' => 'berita']);
+        Route::resource('divisi', \App\Http\Controllers\Admin\DivisiController::class)->parameters(['divisi' => 'divisi']);
+        Route::resource('program-kerja', \App\Http\Controllers\Admin\ProgramKerjaController::class)->parameters(['program-kerja' => 'programKerja']);
+        Route::resource('album-galeri', \App\Http\Controllers\Admin\AlbumGaleriController::class)->parameters(['album-galeri' => 'albumGaleri']);
+        Route::resource('galeri', \App\Http\Controllers\Admin\GaleriController::class)->parameters(['galeri' => 'galeri']);
+        Route::resource('dokumen', \App\Http\Controllers\Admin\DokumenController::class)->parameters(['dokumen' => 'dokuman']);
+        
+        // Phase 4 Routes
+        Route::resource('aspirasi', \App\Http\Controllers\Admin\AspirasiController::class)->only(['index', 'update', 'destroy']);
+        Route::resource('pesan', \App\Http\Controllers\Admin\PesanKontakController::class)->only(['index', 'show', 'destroy']);
+        
+        Route::get('pengaturan', [\App\Http\Controllers\Admin\PengaturanController::class, 'index'])->name('pengaturan.index');
+        Route::post('pengaturan', [\App\Http\Controllers\Admin\PengaturanController::class, 'updateAll'])->name('pengaturan.update');
     });
 });
 

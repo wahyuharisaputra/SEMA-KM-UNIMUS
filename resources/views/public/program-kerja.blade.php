@@ -1,12 +1,12 @@
 @extends('public.layouts.app')
 
-@section('title', 'Program Kerja')
+@section('title', 'Agenda Organisasi')
 
 @section('content')
 <!-- Page Header -->
 <div class="bg-primary text-white py-5" style="background: linear-gradient(135deg, var(--primary) 0%, rgba(15,23,42,1) 100%);">
     <div class="container text-center py-4">
-        <h1 class="display-5 fw-bold" data-aos="fade-down">Program Kerja</h1>
+        <h1 class="display-5 fw-bold" data-aos="fade-down">Agenda Organisasi</h1>
         <p class="lead text-white-50" data-aos="fade-up" data-aos-delay="100">Daftar inisiatif dan kegiatan unggulan SEMA KM UNIMUS periode ini</p>
     </div>
 </div>
@@ -19,7 +19,7 @@
                 <table class="table table-hover align-middle border shadow-sm rounded-4 overflow-hidden" style="border-radius: 1rem; border-collapse: collapse;">
                     <thead class="bg-light text-primary">
                         <tr>
-                            <th class="py-3 px-4 border-0">Nama Program Kerja</th>
+                            <th class="py-3 px-4 border-0">Nama Agenda</th>
                             <th class="py-3 px-4 border-0">Divisi / Komisi</th>
                             <th class="py-3 px-4 border-0">Timeline</th>
                             <th class="py-3 px-4 border-0">Status</th>

@@ -39,7 +39,7 @@ class ProgramKerjaController extends Controller
 
         ProgramKerja::create($data);
 
-        return redirect()->route('admin.program-kerja.index')->with('success', 'Program Kerja berhasil ditambahkan.');
+        return redirect()->route('admin.program-kerja.index')->with('success', 'Agenda berhasil ditambahkan.');
     }
 
     public function edit(ProgramKerja $programKerja)
@@ -67,12 +67,12 @@ class ProgramKerjaController extends Controller
 
         $programKerja->update($data);
 
-        return redirect()->route('admin.program-kerja.index')->with('success', 'Program Kerja berhasil diperbarui.');
+        return redirect()->route('admin.program-kerja.index')->with('success', 'Agenda berhasil diperbarui.');
     }
 
     public function destroy(ProgramKerja $programKerja)
     {
         $programKerja->delete();
-        return redirect()->route('admin.program-kerja.index')->with('success', 'Program Kerja berhasil dihapus.');
+        return redirect()->route('admin.program-kerja.index')->with('success', 'Agenda berhasil dihapus.');
     }
 }

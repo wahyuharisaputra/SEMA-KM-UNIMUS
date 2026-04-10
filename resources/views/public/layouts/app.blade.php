@@ -182,7 +182,7 @@
                         <a class="nav-link {{ request()->routeIs('tentang-kami') ? 'active' : '' }}" href="{{ route('tentang-kami') }}">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('program-kerja') ? 'active' : '' }}" href="{{ route('program-kerja') }}">Program Kerja</a>
+                        <a class="nav-link {{ request()->routeIs('program-kerja') ? 'active' : '' }}" href="{{ route('program-kerja') }}">Agenda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('berita') ? 'active' : '' }}" href="{{ route('berita') }}">Berita</a>
@@ -224,7 +224,7 @@
                     <h5 class="text-white fw-bold mb-3">Tautan Cepat</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="{{ route('tentang-kami') }}">Tentang Kami</a></li>
-                        <li class="mb-2"><a href="{{ route('program-kerja') }}">Program Kerja</a></li>
+                        <li class="mb-2"><a href="{{ route('program-kerja') }}">Agenda</a></li>
                         <li class="mb-2"><a href="{{ route('berita') }}">Berita & Artikel</a></li>
                         <li class="mb-2"><a href="{{ route('aspirasi') }}">Aspirasi Mahasiswa</a></li>
                     </ul>

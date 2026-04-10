@@ -103,7 +103,7 @@
             </li>
             <li>
                 <a href="{{ route('admin.program-kerja.index') }}" class="nav-link {{ request()->routeIs('admin.program-kerja.*') ? 'active' : '' }}">
-                    <i class="bi bi-calendar-check"></i> Program Kerja
+                    <i class="bi bi-calendar-check"></i> Agenda
                 </a>
             </li>
             <li>

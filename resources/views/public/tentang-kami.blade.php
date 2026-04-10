@@ -118,7 +118,7 @@
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80" class="rounded-circle object-fit-cover mb-2" style="width: 80px; height: 80px;" alt="Ketua Komisi">
                     <h6 class="fw-bold">Rizky Pratama</h6>
                     <span class="badge bg-secondary text-dark mb-3">Ketua Komisi</span>
-                    <p class="small text-muted mb-0">Mengawasi kinerja mitra kerja (BEM) serta memastikan program kerja berjalan sesuai GBPK.</p>
+                    <p class="small text-muted mb-0">Mengawasi kinerja mitra kerja (BEM) serta memastikan agenda berjalan sesuai GBPK.</p>
                 </div>
             </div>
         </div>

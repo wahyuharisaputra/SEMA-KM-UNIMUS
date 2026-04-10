@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Manajemen Program Kerja</h1>
+    <h1 class="h3 mb-0 text-gray-800">Manajemen Agenda</h1>
     <a href="{{ route('admin.program-kerja.create') }}" class="btn btn-primary">
-        <i class="bi bi-plus-lg"></i> Tambah Program Kerja
+        <i class="bi bi-plus-lg"></i> Tambah Agenda
     </a>
 </div>
 
@@ -55,7 +55,7 @@
                             <a href="{{ route('admin.program-kerja.edit', $item->id) }}" class="btn btn-sm btn-warning mb-1">
                                 <i class="bi bi-pencil"></i>
                             </a>
-                            <form action="{{ route('admin.program-kerja.destroy', $item->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus program kerja ini?');">
+                            <form action="{{ route('admin.program-kerja.destroy', $item->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus agenda ini?');">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-sm btn-danger mb-1">
@@ -66,7 +66,7 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="6" class="text-center">Belum ada data program kerja.</td>
+                        <td colspan="6" class="text-center">Belum ada data agenda.</td>
                     </tr>
                     @endforelse
                 </tbody>

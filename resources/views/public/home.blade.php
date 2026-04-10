@@ -129,7 +129,7 @@
                 <p class="lead mb-5 fs-5 fw-light" style="max-width: 600px;">Lembaga legislatif mahasiswa tertinggi di tingkat universitas yang menaungi seluruh mahasiswa Universitas Muhammadiyah Semarang.</p>
                 <div class="d-flex gap-3 flex-wrap">
                     <a href="{{ route('tentang-kami') }}" class="btn btn-custom btn-lg">Tentang Kami</a>
-                    <a href="{{ route('program-kerja') }}" class="btn btn-outline-light btn-lg rounded-pill px-4">Program Kerja</a>
+                    <a href="{{ route('program-kerja') }}" class="btn btn-outline-light btn-lg rounded-pill px-4">Agenda</a>
                 </div>
             </div>
             <div class="col-lg-4 d-none d-lg-block text-center" data-aos="zoom-in" data-aos-delay="200">
@@ -166,7 +166,7 @@
                 <div class="stat-card">
                     <div class="stat-icon"><i class="bi bi-calendar2-check-fill"></i></div>
                     <div class="stat-number">24</div>
-                    <div class="text-muted fw-bold text-uppercase small mt-2">Program Kerja</div>
+                    <div class="text-muted fw-bold text-uppercase small mt-2">Agenda Organisasi</div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
@@ -207,11 +207,11 @@
     </div>
 </section>
 
-<!-- Program Kerja Unggulan -->
-<section class="py-5 bg-white">
-    <div class="container">
-        <div class="text-center mb-5" data-aos="fade-up">
-            <h2 class="section-title text-center">Program Kerja Unggulan</h2>
+<!-- Agenda Unggulan -->
+<section class="py-5" id="program-kerja">
+    <div class="container py-lg-4">
+        <div class="mb-5 text-center" data-aos="fade-up">
+            <h2 class="section-title text-center">Agenda Unggulan</h2>
             <p class="text-muted max-w-2xl mx-auto">Kami memiliki berbagai program inisiatif untuk mendukung penuh potensi mahasiswa dan memperbaiki eskalasi advokasi kampus.</p>
         </div>
         
@@ -253,7 +253,7 @@
         </div>
         
         <div class="text-center mt-5" data-aos="zoom-in">
-            <a href="{{ route('program-kerja') }}" class="btn btn-outline-primary rounded-pill px-4">Lihat Seluruh Program Kerja</a>
+            <a href="{{ route('program-kerja') }}" class="btn btn-outline-primary rounded-pill px-4">Lihat Seluruh Agenda</a>
         </div>
     </div>
 </section>

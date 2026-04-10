@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Tambah Program Kerja</h1>
+    <h1 class="h3 mb-0 text-gray-800">Tambah Agenda</h1>
     <a href="{{ route('admin.program-kerja.index') }}" class="btn btn-secondary">
         <i class="bi bi-arrow-left"></i> Kembali
     </a>
@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="mb-3">
-                        <label for="nama" class="form-label">Nama Program Kerja <span class="text-danger">*</span></label>
+                        <label for="nama" class="form-label">Nama Agenda <span class="text-danger">*</span></label>
                         <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" value="{{ old('nama') }}" required>
                         @error('nama')
                             <div class="invalid-feedback">{{ $message }}</div>
@@ -86,7 +86,7 @@
                     </div>
                     
                     <div class="d-grid mt-4">
-                        <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Simpan Program Kerja</button>
+                        <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Simpan Agenda</button>
                     </div>
                 </div>
             </div>

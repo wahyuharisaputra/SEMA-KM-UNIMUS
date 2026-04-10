@@ -31,7 +31,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs fw-bold text-success text-uppercase mb-1">
-                            Program Kerja</div>
+                            Agenda</div>
                         <div class="h5 mb-0 fw-bold text-gray-800">0</div>
                     </div>
                     <div class="col-auto">
@@ -90,7 +90,7 @@
                 <h6 class="m-0 fw-bold text-primary">Selamat Datang di Admin Panel SEMA KM UNIMUS</h6>
             </div>
             <div class="card-body">
-                <p>Gunakan menu di sebelah kiri untuk mengelola konten website publik SEMA KM UNIMUS. Anda dapat menambahkan berita terbaru, program kerja, mengelola anggota struktural, serta meninjau aspirasi dari mahasiswa.</p>
+                <p>Gunakan menu di sebelah kiri untuk mengelola konten website publik SEMA KM UNIMUS. Anda dapat menambahkan berita terbaru, agenda, mengelola anggota struktural, serta meninjau aspirasi dari mahasiswa.</p>
             </div>
         </div>
     </div>

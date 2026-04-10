@@ -37,7 +37,7 @@
                             <a href="{{ route('admin.divisi.edit', $item->id) }}" class="btn btn-sm btn-warning mb-1">
                                 <i class="bi bi-pencil"></i>
                             </a>
-                            <form action="{{ route('admin.divisi.destroy', $item->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus divisi ini? Jika dihapus, program kerja terkait juga akan terhapus!');">
+                            <form action="{{ route('admin.divisi.destroy', $item->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus divisi ini? Jika dihapus, agenda terkait juga akan terhapus!');">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-sm btn-danger mb-1">

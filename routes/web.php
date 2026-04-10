@@ -37,14 +37,16 @@ Route::get('/kontak', function () {
 })->name('kontak');
 
 // Admin Routes protected by Auth
-Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(function () {
+Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     })->name('dashboard');
 
-    // Nanti akan ditambahkan rute CRUD di sini
-    // Route::resource('berita', Admin\BeritaController::class);
-    // Route::resource('program-kerja', Admin\ProgramKerjaController::class);
+    Route::name('admin.')->group(function () {
+        // Nanti akan ditambahkan rute CRUD di sini
+        // Route::resource('berita', Admin\BeritaController::class);
+        // Route::resource('program-kerja', Admin\ProgramKerjaController::class);
+    });
 });
 
 // Auth Routes from Breeze

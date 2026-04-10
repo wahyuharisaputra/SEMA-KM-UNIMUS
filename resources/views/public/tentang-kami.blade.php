@@ -11,16 +11,41 @@
     </div>
 </div>
 
-<!-- Sejarah Section -->
+<!-- Profil Section -->
 <div class="container py-5">
     <div class="row align-items-center mb-5">
-        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-            <img src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kampus Unimus" class="img-fluid rounded-4 shadow-lg">
+        <div class="col-lg-5 text-center mb-4 mb-lg-0" data-aos="fade-right">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo SEMA KM UNIMUS" class="img-fluid" style="max-height: 400px;">
         </div>
-        <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
-            <h2 class="section-title text-start mb-4">Sejarah Organisasi</h2>
-            <p class="text-muted lh-lg">Senat Mahasiswa Keluarga Mahasiswa (SEMA KM) Universitas Muhammadiyah Semarang dibentuk sebagai wadah representatif mahasiswa di tingkat universitas. Mengemban fungsi legislasi, aspirasi, mediasi, penganggaran, dan pengawasan terhadap seluruh kegiatan kemahasiswaan di lingkungan UNIMUS.</p>
-            <p class="text-muted lh-lg">Sejak awal berdirinya, SEMA KM terus memperjuangkan hak-hak mahasiswa dan memastikan segala bentuk regulasi internal KM UNIMUS berjalan sesuai dengan koridor hukum yang disepakati bersama, berlandaskan nilai-nilai Keislaman dan Kemuhammadiyahan.</p>
+        <div class="col-lg-7 ps-lg-5" data-aos="fade-left">
+            <div class="mb-4">
+                <h4 class="text-primary fw-bold mb-0">Hidup Mahasiswa!</h4>
+                <h4 class="text-danger fw-bold mb-0">Hidup Rakyat Indonesia!</h4>
+                <div class="mt-2 fw-bold text-secondary">
+                    <span>Viva legislativa!</span> | <span>Viva Yudikativa!</span>
+                </div>
+            </div>
+
+            <div class="card border-0 bg-light p-4 rounded-4 mb-4 border-start border-4 border-primary">
+                <p class="fst-italic mb-0 text-dark">
+                    "Mahasiswa adalah manusia yang diharapkan menjadi agent of change (agen perubahan) bagi masyarakat dan bangsa Indonesia sudah sepatutnya kita bergerak untuk kebaikan bangsa dan negara khususnya untuk diri kita masing-masing."
+                </p>
+            </div>
+
+            <p class="text-muted lh-lg">
+                Senat Mahasiswa Universitas Muhammadiyah Semarang atau yang kemudian disingkat menjadi <strong>SEMA KM Unimus</strong> adalah organisasi yang terbentuk dan disahkan pada tanggal <strong>11 Desember 2016</strong>. Dengan umur yang sangat muda ini SEMA KM Unimus berkedudukan sebagai organisasi/ lembaga legislatif dan yudikatif satu-satunya di kampus Unimus dan menjadi salah satu lembaga tinggi yang ada di kampus Unimus selain Badan Eksekutif Mahasiswa Keluarga Mahasiswa (BEM KM) Unimus dan Kordinator Komisariat Ikatan Mahasiswa Muhammadiyah (Korkom Unimus).
+            </p>
+
+            <p class="text-muted lh-lg">
+                SEMA KM Unimus juga memiliki tanggung jawab yang sangat mulia yaitu <strong>controlling</strong> terhadap semua organisasi mahasiswa yang ada di Unimus.
+            </p>
+
+            <div class="mt-4 p-3 bg-white shadow-sm rounded-3 border">
+                <h6 class="fw-bold text-dark mb-2"><i class="bi bi-geo-alt-fill text-danger"></i> Sekretariat:</h6>
+                <p class="small text-muted mb-0">
+                    Gedung Pusat Kegiatan Mahasiswa (PKM), Jalan Kedungmundu No.18, Tembalang, Semarang.
+                </p>
+            </div>
         </div>
     </div>
 </div>

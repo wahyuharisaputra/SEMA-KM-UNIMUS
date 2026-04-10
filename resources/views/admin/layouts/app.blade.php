@@ -80,14 +80,14 @@
 <div class="d-flex">
     <!-- Sidebar -->
     <div class="sidebar d-flex flex-column flex-shrink-0 text-white" style="width: 250px;">
-        <a href="{{ route('admin.dashboard') }}" class="sidebar-brand text-white text-decoration-none">
+        <a href="{{ route('dashboard') }}" class="sidebar-brand text-white text-decoration-none">
             <img src="{{ asset('images/logo.png') }}" alt="Logo SEMA KM">
             <div class="d-block">SEMA KM UNIMUS</div>
             <div class="small fw-normal" style="font-size: 0.7rem; color: #ffc107;">Administrator</div>
         </a>
         <ul class="nav nav-pills flex-column mb-auto mt-3">
             <li class="nav-item">
-                <a href="{{ route('admin.dashboard') }}" class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
+                <a href="{{ route('dashboard') }}" class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}">
                     <i class="bi bi-speedometer2"></i> Dashboard
                 </a>
             </li>

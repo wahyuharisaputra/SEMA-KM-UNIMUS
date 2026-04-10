@@ -92,8 +92,13 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.berita.index') }}" class="nav-link {{ request()->routeIs('admin.berita.*') ? 'active' : '' }}">
                     <i class="bi bi-newspaper"></i> Berita & Artikel
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('admin.kategori-berita.index') }}" class="nav-link {{ request()->routeIs('admin.kategori-berita.*') ? 'active' : '' }}">
+                    <i class="bi bi-tags"></i> Kategori Berita
                 </a>
             </li>
             <li>

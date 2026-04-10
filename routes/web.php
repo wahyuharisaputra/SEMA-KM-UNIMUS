@@ -43,9 +43,8 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
     })->name('dashboard');
 
     Route::name('admin.')->group(function () {
-        // Nanti akan ditambahkan rute CRUD di sini
-        // Route::resource('berita', Admin\BeritaController::class);
-        // Route::resource('program-kerja', Admin\ProgramKerjaController::class);
+        Route::resource('kategori-berita', \App\Http\Controllers\Admin\KategoriBeritaController::class)->parameters(['kategori-berita' => 'kategori']);
+        Route::resource('berita', \App\Http\Controllers\Admin\BeritaController::class)->parameters(['berita' => 'berita']);
     });
 });
 

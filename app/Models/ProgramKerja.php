@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ProgramKerja extends Model
 {
     protected $fillable = [
-        'nama', 'slug', 'deskripsi', 'tujuan', 
+        'nama', 'slug', 'deskripsi', 'tujuan', 'periode', 'fotos',
         'timeline_start', 'timeline_end', 
         'status_pelaksanaan', 'divisi_id'
     ];
@@ -15,6 +15,7 @@ class ProgramKerja extends Model
     protected $casts = [
         'timeline_start' => 'date',
         'timeline_end' => 'date',
+        'fotos' => 'array',
     ];
 
     public function divisi()

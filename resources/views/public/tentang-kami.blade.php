@@ -63,7 +63,7 @@
                         <i class="bi bi-eye text-primary fs-1"></i>
                         <h3 class="fw-bold mt-2">Visi</h3>
                     </div>
-                    <p class="text-center text-muted lh-lg fs-5">"Menjadikan SEMA KM UNIMUS sebagai lembaga legislatif mahasiswa yang progresif, inklusif, transparan, dan berkeadilan guna mewujudkan KM UNIMUS yang berdaulat dan berkemajuan."</p>
+                    <p class="text-center text-muted lh-lg fs-5">"Menjadikan Senat Mahasiswa KM UNIMUS sebagai organisasi yang Demokratis, Berintegritas dan Inklusif"</p>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
@@ -73,10 +73,10 @@
                         <h3 class="fw-bold mt-2">Misi</h3>
                     </div>
                     <ul class="text-muted lh-lg list-unstyled">
-                        <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-secondary me-3 mt-1"></i> Mengoptimalkan fungsi legislasi melalui produk hukum yang solutif.</li>
-                        <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-secondary me-3 mt-1"></i> Menjalankan fungsi pengawasan secara objektif dan independen terhadap BEM KM UNIMUS.</li>
-                        <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-secondary me-3 mt-1"></i> Membangun mekanisme penjaringan aspirasi mahasiswa yang mudah diakses dan responsif.</li>
-                        <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-secondary me-3 mt-1"></i> Menjalin sinergitas harmonis antar elemen organisasi mahasiswa di UNIMUS.</li>
+                        <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-secondary me-3 mt-1"></i> Menjembatani aspirasi mahasiswa secara objektif dengan pihak terkait.</li>
+                        <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-secondary me-3 mt-1"></i> Menyusun, Mengkaji, dan Menetapkan peraturan mahasiswa yang demokratis sesuai dengan KM Unimus</li>
+                        <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-secondary me-3 mt-1"></i> Mengayomi seluruh Lembaga KM Unimus</li>
+                        <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-secondary me-3 mt-1"></i> Membina hubungan baik dengan seluruh Lembaga KM Unimus</li>
                     </ul>
                 </div>
             </div>
@@ -91,60 +91,86 @@
         <p class="text-muted">Mengenal lebih dekat para wakil mahasiswa yang mengemban amanah di SEMA KM UNIMUS.</p>
     </div>
 
-    <!-- Pimpinan -->
+    <!-- Pimpinan: Ketua Umum -->
     <div class="row justify-content-center mb-5">
-        <div class="col-lg-3 col-md-6 text-center" data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-lg-4 col-md-6 text-center" data-aos="zoom-in" data-aos-delay="100">
             <div class="card border-0 bg-transparent">
-                <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" class="rounded-circle object-fit-cover mx-auto mb-3 shadow" style="width: 150px; height: 150px; border: 4px solid var(--secondary);" alt="Ketua Umum">
-                <h5 class="fw-bold mb-1">Ahmad Fulan</h5>
-                <p class="text-primary fw-bold small text-uppercase">Ketua Umum</p>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center" data-aos="zoom-in" data-aos-delay="200">
-            <div class="card border-0 bg-transparent">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" class="rounded-circle object-fit-cover mx-auto mb-3 shadow" style="width: 150px; height: 150px; border: 4px solid var(--primary);" alt="Wakil Ketua">
-                <h5 class="fw-bold mb-1">Siti Nurhaliza</h5>
-                <p class="text-primary fw-bold small text-uppercase">Wakil Ketua Umum</p>
+                <img src="{{ asset('images/ketua-sema.jpeg') }}" class="rounded-circle object-fit-cover mx-auto mb-3 shadow" style="width: 150px; height: 150px; border: 4px solid var(--secondary);" alt="Ketua Umum">
+                <h5 class="fw-bold mb-1">Farhan Syafa Rianor Handoko</h5>
+                <p class="text-primary fw-bold small text-uppercase">Ketua Umum 2025-2026</p>
             </div>
         </div>
     </div>
 
-    <!-- Komisi -->
-    <div class="row g-4 mt-4">
-        <!-- Komisi 1 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
-            <div class="card border-0 shadow-sm rounded-4 h-100 text-center p-4">
-                <h5 class="fw-bold text-dark mb-4 border-bottom pb-2">Komisi I: Legislasi</h5>
-                <div class="d-flex flex-column align-items-center">
-                    <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80" class="rounded-circle object-fit-cover mb-2" style="width: 80px; height: 80px;" alt="Ketua Komisi">
-                    <h6 class="fw-bold">Budi Santoso</h6>
-                    <span class="badge bg-secondary text-dark mb-3">Ketua Komisi</span>
-                    <p class="small text-muted mb-0">Bertanggungjawab dalam proses penyusunan, pengkajian, dan revisi undang-undang KM UNIMUS.</p>
+    <!-- Jajaran Wakil Ketua & Bawahan -->
+    <div class="row g-4 justify-content-center">
+        <!-- Wakil Ketua 1 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card border-0 shadow-sm rounded-4 h-100 p-4 text-center" style="border-top: 4px solid var(--primary) !important;">
+                <div class="mb-3">
+                    <img src="{{ asset('images/wakil-ketua-1.png') }}" class="rounded-circle object-fit-cover mx-auto mb-3 shadow-sm" style="width: 100px; height: 100px; border: 3px solid var(--secondary);" alt="Wakil Ketua I">
+                    <h5 class="fw-bold text-dark mb-1">Arald Khautal Wijaya</h5>
+                    <p class="text-primary fw-bold small text-uppercase mb-0">Wakil Ketua I</p>
                 </div>
+                <hr class="text-muted opacity-25">
+                <ul class="list-unstyled text-muted small text-start mb-0">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary me-2"></i>Badan Konstitusi</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary me-2"></i>Sekretaris Jenderal</li>
+                    <li><i class="bi bi-check-circle-fill text-secondary me-2"></i>Komisi VI</li>
+                </ul>
             </div>
         </div>
-        <!-- Komisi 2 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card border-0 shadow-sm rounded-4 h-100 text-center p-4">
-                <h5 class="fw-bold text-dark mb-4 border-bottom pb-2">Komisi II: Aspirasi</h5>
-                <div class="d-flex flex-column align-items-center">
-                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80" class="rounded-circle object-fit-cover mb-2" style="width: 80px; height: 80px;" alt="Ketua Komisi">
-                    <h6 class="fw-bold">Ayu Wandira</h6>
-                    <span class="badge bg-secondary text-dark mb-3">Ketua Komisi</span>
-                    <p class="small text-muted mb-0">Fokus pada penyaringan, advokasi, dan penindaklanjutan aspirasi mahasiswa ke pihak terkait.</p>
+
+        <!-- Wakil Ketua 2 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card border-0 shadow-sm rounded-4 h-100 p-4 text-center" style="border-top: 4px solid var(--primary) !important;">
+                <div class="mb-3">
+                    <img src="{{ asset('images/wakil-ketua-2.png') }}" class="rounded-circle object-fit-cover mx-auto mb-3 shadow-sm" style="width: 100px; height: 100px; border: 3px solid var(--secondary);" alt="Wakil Ketua II">
+                    <h5 class="fw-bold text-dark mb-1">Muhammad Pauger Alamsyah</h5>
+                    <p class="text-primary fw-bold small text-uppercase mb-0">Wakil Ketua II</p>
                 </div>
+                <hr class="text-muted opacity-25">
+                <ul class="list-unstyled text-muted small text-start mb-0">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary me-2"></i>Badan Anggaran</li>
+                    <!-- Menggunakan Komisi I sesuai urutan logis komisi atau Komisi II sesuai input. Sebagai kompromi/koreksi sesuai urutan file: -->
+                    <li><i class="bi bi-check-circle-fill text-secondary me-2"></i>Komisi I</li>
+                </ul>
             </div>
         </div>
-        <!-- Komisi 3 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="card border-0 shadow-sm rounded-4 h-100 text-center p-4">
-                <h5 class="fw-bold text-dark mb-4 border-bottom pb-2">Komisi III: Pengawasan</h5>
-                <div class="d-flex flex-column align-items-center">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80" class="rounded-circle object-fit-cover mb-2" style="width: 80px; height: 80px;" alt="Ketua Komisi">
-                    <h6 class="fw-bold">Rizky Pratama</h6>
-                    <span class="badge bg-secondary text-dark mb-3">Ketua Komisi</span>
-                    <p class="small text-muted mb-0">Mengawasi kinerja mitra kerja (BEM) serta memastikan agenda berjalan sesuai GBPK.</p>
+
+        <!-- Wakil Ketua 3 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card border-0 shadow-sm rounded-4 h-100 p-4 text-center" style="border-top: 4px solid var(--primary) !important;">
+                <div class="mb-3">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                        <i class="bi bi-person-badge-fill fs-3"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-0">Wakil Ketua III</h5>
                 </div>
+                <hr class="text-muted opacity-25">
+                <ul class="list-unstyled text-muted small text-start mb-0">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary me-2"></i>BPI</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary me-2"></i>Komisi II</li>
+                    <li><i class="bi bi-check-circle-fill text-secondary me-2"></i>Komisi III</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Wakil Ketua 4 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card border-0 shadow-sm rounded-4 h-100 p-4 text-center" style="border-top: 4px solid var(--primary) !important;">
+                <div class="mb-3">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                        <i class="bi bi-person-badge-fill fs-3"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-0">Wakil Ketua IV</h5>
+                </div>
+                <hr class="text-muted opacity-25">
+                <ul class="list-unstyled text-muted small text-start mb-0">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary me-2"></i>Badan Legislasi</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary me-2"></i>Komisi IV</li>
+                    <li><i class="bi bi-check-circle-fill text-secondary me-2"></i>Komisi V</li>
+                </ul>
             </div>
         </div>
     </div>

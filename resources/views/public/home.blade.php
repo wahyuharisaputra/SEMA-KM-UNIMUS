@@ -6,7 +6,7 @@
 <style>
     /* Hero Section */
     .hero-section {
-        background: linear-gradient(135deg, rgba(30,58,138,0.9) 0%, rgba(15,23,42,0.95) 100%), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+        background: linear-gradient(135deg, rgba(30,58,138,0.9) 0%, rgba(15,23,42,0.95) 100%), url('{{ asset("images/hero-bg.jpg") }}') center/cover;
         color: white;
         padding: 8rem 0 6rem;
         position: relative;
@@ -185,20 +185,25 @@
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-5" data-aos="fade-right">
-                <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ketua SEMA" class="img-fluid ketua-img w-100 object-fit-cover" style="height: 500px;">
+                <img src="{{ asset('images/ketua-sema.jpeg') }}" alt="Ketua SEMA" class="img-fluid ketua-img w-100 object-fit-cover" style="height: 500px;">
             </div>
             <div class="col-lg-7 position-relative" data-aos="fade-left">
                 <i class="bi bi-quote quote-icon"></i>
                 <div class="ps-4">
                     <h5 class="text-uppercase text-secondary fw-bold mb-2">Sambutan</h5>
                     <h2 class="section-title mb-4">Ketua Umum SEMA KM</h2>
-                    <p class="fs-5 text-dark font-italic mb-4">
-                        "Selamat datang di portal resmi web Senat Mahasiswa Keluarga Mahasiswa Universitas Muhammadiyah Semarang. Website ini kami dedikasikan sebagai wujud transparansi, akuntabilitas, dan wadah interaksi antara lembaga dengan seluruh insan akademika UNIMUS. Mari bersama membangun iklim demokrasi kampus yang berkemajuan."
-                    </p>
+                    <div class="fs-5 text-dark font-italic mb-4">
+                        <p>Assalamu’alaikum warahmatullahi wabarakatuh,</p>
+                        <p>SEMA KM UNIMUS hadir bukan hanya sebagai lembaga legislatif, tetapi sebagai penggerak perubahan dalam membangun tata kelola organisasi mahasiswa yang berintegritas, adaptif, dan berdampak.</p>
+                        <p>Kami meyakini bahwa kepemimpinan yang kuat lahir dari keberanian untuk transparan, konsisten dalam pengawasan, serta mampu merangkul kolaborasi lintas elemen mahasiswa. Oleh karena itu, SEMA KM UNIMUS berkomitmen untuk menjadi ruang strategis dalam merumuskan kebijakan, mengawal kinerja organisasi, serta memastikan setiap langkah berpihak pada kepentingan mahasiswa.</p>
+                        <p>Ke depan, kami membawa visi untuk mewujudkan ekosistem organisasi yang progresif, inklusif, dan berkelanjutan. Sejalan dengan nilai Sustainable Development Goals (SDGs), kami ingin memastikan bahwa setiap proses yang dibangun hari ini mampu memberikan dampak nyata bagi masa depan mahasiswa, kampus, dan masyarakat.</p>
+                        <p>Bersama, kita tidak hanya menjalankan organisasi — kita membangun arah, menciptakan perubahan, dan meninggalkan jejak kebermanfaatan.</p>
+                        <p>Wassalamu’alaikum warahmatullahi wabarakatuh</p>
+                    </div>
                     <div class="d-flex align-items-center mt-4">
                         <div>
-                            <h5 class="fw-bold mb-0 text-primary">Ahmad Fulan</h5>
-                            <p class="text-muted mb-0">Ketua Umum Periode 2026</p>
+                            <h5 class="fw-bold mb-0 text-primary">Farhan Syafa Rianor Handoko</h5>
+                            <p class="text-muted mb-0">Ketua Umum Periode 2025-2026</p>
                         </div>
                     </div>
                 </div>
@@ -269,42 +274,39 @@
         </div>
 
         <div class="row g-4 mt-3">
-            <!-- Dummy Article 1 -->
+            <!-- Mockup Article 1 -->
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="card news-card position-relative">
-                    <span class="news-badge bg-primary text-white">Kegiatan</span>
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden news-card">
                     <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top news-img" alt="News Image">
                     <div class="card-body p-4 bg-white">
                         <div class="text-muted small mb-2"><i class="bi bi-calendar3 me-1"></i> 10 April 2026</div>
                         <h5 class="card-title fw-bold text-dark mb-3">Pelantikan Raya Organisasi Mahasiswa UNIMUS 2026 Berlangsung Khidmat</h5>
-                        <p class="card-text text-muted text-limit-3">Rektor UNIMUS secara resmi melantik jajaran kepengurusan tingkat universitas, termasuk Senat Mahasiswa (SEMA)...</p>
-                        <a href="#" class="text-decoration-none fw-bold mt-2 d-inline-block text-secondary">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                        <p class="card-text text-muted small mb-3">Rektor UNIMUS secara resmi melantik jajaran kepengurusan tingkat universitas, termasuk Senat Mahasiswa (SEMA)...</p>
+                        <a href="#" class="text-secondary fw-bold text-decoration-none small">Baca Selengkapnya <i class="bi bi-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
-            <!-- Dummy Article 2 -->
+            <!-- Mockup Article 2 -->
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="card news-card position-relative">
-                    <span class="news-badge">Advokasi</span>
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden news-card">
                     <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top news-img" alt="News Image">
                     <div class="card-body p-4 bg-white">
                         <div class="text-muted small mb-2"><i class="bi bi-calendar3 me-1"></i> 05 April 2026</div>
                         <h5 class="card-title fw-bold text-dark mb-3">Audiensi SEMA dengan Rektorat Tekait Fasilitas Kampus Terpadu</h5>
-                        <p class="card-text text-muted text-limit-3">SEMA KM UNIMUS berhasil mengawal perbaikan fasilitas ruang kelas dan tempat ibadah melalui mekanisme audiensi...</p>
-                        <a href="#" class="text-decoration-none fw-bold mt-2 d-inline-block text-secondary">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                        <p class="card-text text-muted small mb-3">SEMA KM UNIMUS berhasil mengawal perbaikan fasilitas ruang kelas dan tempat ibadah melalui mekanisme...</p>
+                        <a href="#" class="text-secondary fw-bold text-decoration-none small">Baca Selengkapnya <i class="bi bi-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
-            <!-- Dummy Article 3 -->
+            <!-- Mockup Article 3 -->
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="card news-card position-relative">
-                    <span class="news-badge bg-info text-dark">Pengumuman</span>
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden news-card">
                     <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top news-img" alt="News Image">
                     <div class="card-body p-4 bg-white">
                         <div class="text-muted small mb-2"><i class="bi bi-calendar3 me-1"></i> 02 April 2026</div>
                         <h5 class="card-title fw-bold text-dark mb-3">Open Recruitment Staff Magang SEMA KM Tahun 2026 Resmi Dibuka</h5>
-                        <p class="card-text text-muted text-limit-3">Kesempatan bagi mahasiswa baru lintas program studi untuk bergabung mempelajari pergerakan legislatif mahasiswa...</p>
-                        <a href="#" class="text-decoration-none fw-bold mt-2 d-inline-block text-secondary">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                        <p class="card-text text-muted small mb-3">Kesempatan bagi mahasiswa baru lintas program studi untuk bergabung mempelajari pergerakan legislatif mahasiswa...</p>
+                        <a href="#" class="text-secondary fw-bold text-decoration-none small">Baca Selengkapnya <i class="bi bi-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>

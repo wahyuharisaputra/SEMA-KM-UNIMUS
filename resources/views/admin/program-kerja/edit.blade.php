@@ -10,7 +10,7 @@
 
 <div class="card shadow mb-4">
     <div class="card-body">
-        <form action="{{ route('admin.program-kerja.update', $programKerja->id) }}" method="POST">
+        <form action="{{ route('admin.program-kerja.update', $programKerja->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             
@@ -39,9 +39,37 @@
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
+
+                    @if($programKerja->fotos && count($programKerja->fotos) > 0)
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Foto Dokumentasi Saat Ini:</label>
+                        <div class="row g-2">
+                            @foreach($programKerja->fotos as $foto)
+                            <div class="col-md-3 position-relative photo-item" id="photo-{{ md5($foto) }}">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="{{ asset('storage/' . $foto) }}" class="card-img-top object-fit-cover" style="height: 120px;" alt="Foto Agenda">
+                                    <div class="card-footer p-1 text-center bg-white">
+                                        <button type="button" class="btn btn-sm btn-danger w-100 delete-photo-btn" data-path="{{ $foto }}">
+                                            <i class="bi bi-trash"></i> Hapus
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                    @endif
                 </div>
                 
                 <div class="col-md-4">
+                    <div class="mb-3">
+                        <label for="periode" class="form-label">Periode <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('periode') is-invalid @enderror" id="periode" name="periode" value="{{ old('periode', $programKerja->periode) }}" placeholder="Contoh: 2025-2026" required>
+                        @error('periode')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
                     <div class="mb-3">
                         <label for="divisi_id" class="form-label">Divisi Penanggung Jawab <span class="text-danger">*</span></label>
                         <select class="form-select @error('divisi_id') is-invalid @enderror" id="divisi_id" name="divisi_id" required>
@@ -87,6 +115,15 @@
                             @enderror
                         </div>
                     </div>
+
+                    <div class="mb-3">
+                        <label for="fotos" class="form-label">Tambah Foto Baru (Bisa lebih dari 1)</label>
+                        <input type="file" class="form-control @error('fotos') is-invalid @enderror @error('fotos.*') is-invalid @enderror" id="fotos" name="fotos[]" multiple accept="image/*">
+                        <div class="form-text">Bisa pilih banyak foto sekaligus. Format: JPG, PNG, JPEG (Maks 2MB/foto)</div>
+                        @error('fotos')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
                     
                     <div class="d-grid mt-4">
                         <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Perbarui Agenda</button>
@@ -96,4 +133,38 @@
         </form>
     </div>
 </div>
+
+@push('scripts')
+<script>
+document.querySelectorAll('.delete-photo-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        if (confirm('Yakin ingin menghapus foto ini secara permanen?')) {
+            const path = this.getAttribute('data-path');
+            const cardItem = this.closest('.photo-item');
+            
+            fetch("{{ route('admin.program-kerja.delete-photo', $programKerja->id) }}", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                body: JSON.stringify({ photo_path: path })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    cardItem.remove();
+                } else {
+                    alert('Gagal menghapus foto: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Terjadi kesalahan saat mencoba menghapus foto.');
+            });
+        }
+    });
+});
+</script>
+@endpush
 @endsection

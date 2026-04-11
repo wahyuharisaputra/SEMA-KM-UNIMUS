@@ -13,7 +13,11 @@ Route::get('/tentang-kami', function () {
 })->name('tentang-kami');
 
 Route::get('/program-kerja', function () {
-    return view('public.program-kerja');
+    $agendasByPeriode = App\Models\ProgramKerja::with('divisi')
+        ->orderBy('periode', 'desc')
+        ->get()
+        ->groupBy('periode');
+    return view('public.program-kerja', compact('agendasByPeriode'));
 })->name('program-kerja');
 
 Route::get('/berita', function () {
@@ -47,6 +51,7 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
         Route::resource('berita', \App\Http\Controllers\Admin\BeritaController::class)->parameters(['berita' => 'berita']);
         Route::resource('divisi', \App\Http\Controllers\Admin\DivisiController::class)->parameters(['divisi' => 'divisi']);
         Route::resource('program-kerja', \App\Http\Controllers\Admin\ProgramKerjaController::class)->parameters(['program-kerja' => 'programKerja']);
+        Route::post('program-kerja/{programKerja}/delete-photo', [\App\Http\Controllers\Admin\ProgramKerjaController::class, 'deletePhoto'])->name('program-kerja.delete-photo');
         Route::resource('album-galeri', \App\Http\Controllers\Admin\AlbumGaleriController::class)->parameters(['album-galeri' => 'albumGaleri']);
         Route::resource('galeri', \App\Http\Controllers\Admin\GaleriController::class)->parameters(['galeri' => 'galeri']);
         Route::resource('dokumen', \App\Http\Controllers\Admin\DokumenController::class)->parameters(['dokumen' => 'dokuman']);

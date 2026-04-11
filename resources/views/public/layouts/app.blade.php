@@ -86,18 +86,18 @@
             width: 80%;
         }
         .btn-custom {
-            background-color: var(--secondary);
+            background-color: #ffc107; /* Vibrant Yellow from Mockup */
             color: var(--dark);
-            font-weight: 600;
+            font-weight: 700;
             border: none;
-            border-radius: 50px;
-            padding: 0.5rem 1.5rem;
+            border-radius: 12px;
+            padding: 0.6rem 1.8rem;
             transition: all 0.3s;
         }
         .btn-custom:hover {
-            background-color: #eab308;
+            background-color: #ffb300;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(250, 204, 21, 0.4);
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
         }
 
         /* Footer */
@@ -255,7 +255,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({

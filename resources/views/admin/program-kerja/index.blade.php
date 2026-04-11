@@ -24,6 +24,7 @@
                         <th width="5%">No</th>
                         <th>Nama Program</th>
                         <th>Divisi</th>
+                        <th>Periode</th>
                         <th>Timeline</th>
                         <th>Status</th>
                         <th width="15%" class="text-center">Aksi</th>
@@ -35,6 +36,7 @@
                         <td>{{ $programKerjas->firstItem() + $index }}</td>
                         <td>{{ $item->nama }}</td>
                         <td>{{ $item->divisi->nama ?? '-' }}</td>
+                        <td><span class="badge bg-secondary">{{ $item->periode }}</span></td>
                         <td>
                             @if($item->timeline_start && $item->timeline_end)
                                 {{ $item->timeline_start->format('d M Y') }} - {{ $item->timeline_end->format('d M Y') }}
@@ -55,10 +57,10 @@
                             <a href="{{ route('admin.program-kerja.edit', $item->id) }}" class="btn btn-sm btn-warning mb-1">
                                 <i class="bi bi-pencil"></i>
                             </a>
-                            <form action="{{ route('admin.program-kerja.destroy', $item->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus agenda ini?');">
+                            <form action="{{ route('admin.program-kerja.destroy', $item->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-danger mb-1">
+                                <button type="button" class="btn btn-sm btn-danger mb-1" onclick="if(confirm('Yakin ingin menghapus agenda ini?')) { this.parentElement.submit(); }">
                                     <i class="bi bi-trash"></i>
                                 </button>
                             </form>
@@ -66,7 +68,7 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="6" class="text-center">Belum ada data agenda.</td>
+                        <td colspan="7" class="text-center">Belum ada data agenda.</td>
                     </tr>
                     @endforelse
                 </tbody>

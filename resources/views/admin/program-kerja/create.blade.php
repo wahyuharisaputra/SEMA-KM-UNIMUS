@@ -10,7 +10,7 @@
 
 <div class="card shadow mb-4">
     <div class="card-body">
-        <form action="{{ route('admin.program-kerja.store') }}" method="POST">
+        <form action="{{ route('admin.program-kerja.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             
             <div class="row">
@@ -41,6 +41,14 @@
                 </div>
                 
                 <div class="col-md-4">
+                    <div class="mb-3">
+                        <label for="periode" class="form-label">Periode <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('periode') is-invalid @enderror" id="periode" name="periode" value="{{ old('periode', '2025-2026') }}" placeholder="Contoh: 2025-2026" required>
+                        @error('periode')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
                     <div class="mb-3">
                         <label for="divisi_id" class="form-label">Divisi Penanggung Jawab <span class="text-danger">*</span></label>
                         <select class="form-select @error('divisi_id') is-invalid @enderror" id="divisi_id" name="divisi_id" required>
@@ -83,6 +91,18 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="fotos" class="form-label">Dokumentasi / Pamflet (Bisa lebih dari 1) <span class="text-danger">*</span></label>
+                        <input type="file" class="form-control @error('fotos') is-invalid @enderror @error('fotos.*') is-invalid @enderror" id="fotos" name="fotos[]" multiple accept="image/*">
+                        <div class="form-text">Bisa pilih banyak foto sekaligus. Format: JPG, PNG, JPEG (Maks 2MB/foto)</div>
+                        @error('fotos')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                        @error('fotos.*')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
                     
                     <div class="d-grid mt-4">

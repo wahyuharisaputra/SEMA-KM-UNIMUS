@@ -32,13 +32,11 @@ Route::get('/dokumen', function () {
     return view('public.dokumen');
 })->name('dokumen');
 
-Route::get('/aspirasi', function () {
-    return view('public.aspirasi');
-})->name('aspirasi');
+Route::get('/aspirasi', [App\Http\Controllers\AspirasiController::class, 'index'])->name('aspirasi');
+Route::post('/aspirasi', [App\Http\Controllers\AspirasiController::class, 'store'])->name('aspirasi.store');
 
-Route::get('/kontak', function () {
-    return view('public.kontak');
-})->name('kontak');
+Route::get('/kontak', [App\Http\Controllers\PesanKontakController::class, 'index'])->name('kontak');
+Route::post('/kontak', [App\Http\Controllers\PesanKontakController::class, 'store'])->name('kontak.store');
 
 // Admin Routes protected by Auth
 Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {

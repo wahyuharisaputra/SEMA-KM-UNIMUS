@@ -198,7 +198,7 @@
                     </li>
                 </ul>
                 <div class="d-flex">
-                    <a href="{{ route('aspirasi') }}" class="btn btn-custom px-4 rounded-pill">Aspirasi Mahasiswa</a>
+                    <a href="{{ route('aspirasi') }}" class="btn btn-custom px-4 rounded-pill">LAYANAN PENGADUAN</a>
                 </div>
             </div>
         </div>
@@ -226,7 +226,7 @@
                         <li class="mb-2"><a href="{{ route('tentang-kami') }}">Tentang Kami</a></li>
                         <li class="mb-2"><a href="{{ route('program-kerja') }}">Agenda</a></li>
                         <li class="mb-2"><a href="{{ route('berita') }}">Berita & Artikel</a></li>
-                        <li class="mb-2"><a href="{{ route('aspirasi') }}">Aspirasi Mahasiswa</a></li>
+                        <li class="mb-2"><a href="{{ route('aspirasi') }}">LAYANAN PENGADUAN</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">

@@ -57,12 +57,12 @@
                             <a href="{{ route('admin.program-kerja.edit', $item->id) }}" class="btn btn-sm btn-warning mb-1">
                                 <i class="bi bi-pencil"></i>
                             </a>
-                            <form action="{{ route('admin.program-kerja.destroy', $item->id) }}" method="POST" class="d-inline">
+                            <a href="javascript:void(0)" class="btn btn-sm btn-danger mb-1" onclick="if(confirm('Yakin ingin menghapus agenda ini?')) { document.getElementById('delete-form-{{ $item->id }}').submit(); }">
+                                <i class="bi bi-trash"></i>
+                            </a>
+                            <form id="delete-form-{{ $item->id }}" action="{{ route('admin.program-kerja.destroy', $item->id) }}" method="POST" style="display: none;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="button" class="btn btn-sm btn-danger mb-1" onclick="if(confirm('Yakin ingin menghapus agenda ini?')) { this.parentElement.submit(); }">
-                                    <i class="bi bi-trash"></i>
-                                </button>
                             </form>
                         </td>
                     </tr>

@@ -19,21 +19,43 @@
         </div>
         <div class="col-lg-6" data-aos="fade-left">
             <div class="card border-0 shadow-lg p-5 rounded-4">
-                <form action="#" method="POST">
+                @if(session('success'))
+                    <div class="alert alert-success border-0 shadow-sm rounded-4 mb-4" role="alert" data-aos="fade-down">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill fs-4 me-3"></i>
+                            <div>
+                                <h6 class="alert-heading fw-bold mb-1">Berhasil Terkirim!</h6>
+                                <p class="mb-0 small">{{ session('success') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+
+                @if($errors->any())
+                    <div class="alert alert-danger border-0 shadow-sm rounded-4 mb-4" role="alert">
+                        <ul class="mb-0 small">
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+                <form action="{{ route('kontak.store') }}" method="POST">
                     @csrf
                     <div class="mb-3">
-                        <label class="form-label fw-bold text-muted">Nama Anda</label>
-                        <input type="text" class="form-control bg-light border-0" required>
+                        <label for="nama" class="form-label fw-bold text-muted">Nama Anda</label>
+                        <input type="text" class="form-control bg-light border-0" id="nama" name="nama" value="{{ old('nama') }}" required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label fw-bold text-muted">Email Anda</label>
-                        <input type="email" class="form-control bg-light border-0" required>
+                        <label for="email" class="form-label fw-bold text-muted">Email Anda</label>
+                        <input type="email" class="form-control bg-light border-0" id="email" name="email" value="{{ old('email') }}" required>
                     </div>
                     <div class="mb-4">
-                        <label class="form-label fw-bold text-muted">Pesan</label>
-                        <textarea class="form-control bg-light border-0" rows="5" required></textarea>
+                        <label for="pesan" class="form-label fw-bold text-muted">Pesan</label>
+                        <textarea class="form-control bg-light border-0" id="pesan" name="pesan" rows="5" required>{{ old('pesan') }}</textarea>
                     </div>
-                    <button class="btn btn-primary w-100 py-3 fw-bold rounded-pill">Kirim Pesan</button>
+                    <button type="submit" class="btn btn-primary w-100 py-3 fw-bold rounded-pill shadow">Kirim Pesan</button>
                 </form>
             </div>
         </div>

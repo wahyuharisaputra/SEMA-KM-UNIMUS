@@ -37,7 +37,7 @@
             </p>
 
             <p class="text-muted lh-lg">
-                SEMA KM Unimus juga memiliki tanggung jawab yang sangat mulia yaitu <strong>controlling</strong> terhadap semua organisasi mahasiswa yang ada di Unimus.
+                SEMA KM Unimus juga memiliki tanggung jawab yang sangat mulia yaitu sebagai lembaga yang menjalankan fungsi <strong>Controlling, Budgeting, Legislasi, dan Advokasi</strong> terhadap semua organisasi mahasiswa yang ada di lingkungan kampus Unimus.
             </p>
 
             <div class="mt-4 p-3 bg-white shadow-sm rounded-3 border">
@@ -102,15 +102,15 @@
         </div>
     </div>
 
-    <!-- Jajaran Wakil Ketua & Bawahan -->
+    <!-- Jajaran Wakil Ketua Umum & Bawahan -->
     <div class="row g-4 justify-content-center">
-        <!-- Wakil Ketua 1 -->
+        <!-- Wakil Ketua Umum 1 -->
         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="card border-0 shadow-sm rounded-4 h-100 p-4 text-center" style="border-top: 4px solid var(--primary) !important;">
                 <div class="mb-3">
-                    <img src="{{ asset('images/wakil-ketua-1.png') }}" class="rounded-circle object-fit-cover mx-auto mb-3 shadow-sm" style="width: 100px; height: 100px; border: 3px solid var(--secondary);" alt="Wakil Ketua I">
+                    <img src="{{ asset('images/wakil-ketua-1.png') }}" class="rounded-circle object-fit-cover mx-auto mb-3 shadow-sm" style="width: 100px; height: 100px; border: 3px solid var(--secondary);" alt="Wakil Ketua Umum I">
                     <h5 class="fw-bold text-dark mb-1">Arald Khautal Wijaya</h5>
-                    <p class="text-primary fw-bold small text-uppercase mb-0">Wakil Ketua I</p>
+                    <p class="text-primary fw-bold small text-uppercase mb-0">Wakil Ketua Umum I</p>
                 </div>
                 <hr class="text-muted opacity-25">
                 <ul class="list-unstyled text-muted small text-start mb-0">
@@ -121,13 +121,13 @@
             </div>
         </div>
 
-        <!-- Wakil Ketua 2 -->
+        <!-- Wakil Ketua Umum 2 -->
         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="card border-0 shadow-sm rounded-4 h-100 p-4 text-center" style="border-top: 4px solid var(--primary) !important;">
                 <div class="mb-3">
-                    <img src="{{ asset('images/wakil-ketua-2.png') }}" class="rounded-circle object-fit-cover mx-auto mb-3 shadow-sm" style="width: 100px; height: 100px; border: 3px solid var(--secondary);" alt="Wakil Ketua II">
+                    <img src="{{ asset('images/wakil-ketua-2.png') }}" class="rounded-circle object-fit-cover mx-auto mb-3 shadow-sm" style="width: 100px; height: 100px; border: 3px solid var(--secondary);" alt="Wakil Ketua Umum II">
                     <h5 class="fw-bold text-dark mb-1">Muhammad Pauger Alamsyah</h5>
-                    <p class="text-primary fw-bold small text-uppercase mb-0">Wakil Ketua II</p>
+                    <p class="text-primary fw-bold small text-uppercase mb-0">Wakil Ketua Umum II</p>
                 </div>
                 <hr class="text-muted opacity-25">
                 <ul class="list-unstyled text-muted small text-start mb-0">
@@ -138,14 +138,14 @@
             </div>
         </div>
 
-        <!-- Wakil Ketua 3 -->
+        <!-- Wakil Ketua Umum 3 -->
         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="card border-0 shadow-sm rounded-4 h-100 p-4 text-center" style="border-top: 4px solid var(--primary) !important;">
                 <div class="mb-3">
                     <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                         <i class="bi bi-person-badge-fill fs-3"></i>
                     </div>
-                    <h5 class="fw-bold text-dark mb-0">Wakil Ketua III</h5>
+                    <h5 class="fw-bold text-dark mb-0">Wakil Ketua Umum III</h5>
                 </div>
                 <hr class="text-muted opacity-25">
                 <ul class="list-unstyled text-muted small text-start mb-0">
@@ -156,14 +156,13 @@
             </div>
         </div>
 
-        <!-- Wakil Ketua 4 -->
+        <!-- Wakil Ketua Umum 4 -->
         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="card border-0 shadow-sm rounded-4 h-100 p-4 text-center" style="border-top: 4px solid var(--primary) !important;">
                 <div class="mb-3">
-                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                        <i class="bi bi-person-badge-fill fs-3"></i>
-                    </div>
-                    <h5 class="fw-bold text-dark mb-0">Wakil Ketua IV</h5>
+                    <img src="{{ asset('images/wakil-ketua-4.jpg') }}" class="rounded-circle object-fit-cover mx-auto mb-3 shadow-sm" style="width: 100px; height: 100px; border: 3px solid var(--secondary);" alt="Wakil Ketua Umum IV">
+                    <h5 class="fw-bold text-dark mb-1">Hanum Ayu Lestari</h5>
+                    <p class="text-primary fw-bold small text-uppercase mb-0">Wakil Ketua Umum IV</p>
                 </div>
                 <hr class="text-muted opacity-25">
                 <ul class="list-unstyled text-muted small text-start mb-0">

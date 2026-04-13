@@ -173,7 +173,7 @@
                 <div class="stat-card">
                     <div class="stat-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
                     <div class="stat-number">120</div>
-                    <div class="text-muted fw-bold text-uppercase small mt-2">Aspirasi Terserap</div>
+                    <div class="text-muted fw-bold text-uppercase small mt-2">Pengaduan Terserap</div>
                 </div>
             </div>
         </div>
@@ -190,6 +190,9 @@
             <div class="col-lg-7 position-relative" data-aos="fade-left">
                 <i class="bi bi-quote quote-icon"></i>
                 <div class="ps-4">
+                    <div class="mb-3 fw-bold text-secondary small text-uppercase" style="letter-spacing: 2px;" data-aos="fade-up" data-aos-delay="300">
+                        <span>Viva legislativa!</span> | <span>Viva Yudikativa!</span>
+                    </div>
                     <h5 class="text-uppercase text-secondary fw-bold mb-2">Sambutan</h5>
                     <h2 class="section-title mb-4">Ketua Umum SEMA KM</h2>
                     <div class="fs-5 text-dark font-italic mb-4">
@@ -320,9 +323,9 @@
         <div class="row bg-primary text-white rounded-5 p-5 position-relative overflow-hidden" data-aos="zoom-in" style="box-shadow: 0 20px 40px rgba(30,58,138,0.2);">
             <div class="col-lg-8 position-relative" style="z-index: 2;">
                 <h2 class="fw-bold mb-3">Punya Ide atau Masalah di Kampus?</h2>
-                <p class="fs-5 text-white-50 mb-4">Jangan diam saja! Sampaikan aspirasi Anda kepada kami. Kami berkomitmen untuk mendengar, mengkaji, dan menindaklanjuti keluh kesah Anda ke pihak birokrasi kampus.</p>
+                <p class="fs-5 text-white-50 mb-4">Jangan diam saja! Sampaikan pengaduan Anda kepada kami. Kami berkomitmen untuk mendengar, mengkaji, dan menindaklanjuti keluh kesah Anda ke pihak birokrasi kampus.</p>
                 <a href="{{ route('aspirasi') }}" class="btn btn-custom btn-lg px-4 gap-2 d-inline-flex align-items-center">
-                    Tulis Aspirasi Sekarang <i class="bi bi-send-fill mt-1"></i>
+                    Tulis Pengaduan Sekarang <i class="bi bi-send-fill mt-1"></i>
                 </a>
             </div>
             <i class="bi bi-megaphone position-absolute" style="font-size: 15rem; right: -20px; top: -30px; opacity: 0.1; color: white; transform: rotate(-15deg);"></i>

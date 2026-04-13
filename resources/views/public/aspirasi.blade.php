@@ -1,12 +1,12 @@
 @extends('public.layouts.app')
 
-@section('title', 'Aspirasi Mahasiswa')
+@section('title', 'LAYANAN PENGADUAN')
 
 @section('content')
 <!-- Page Header -->
 <div class="bg-primary text-white py-5" style="background: linear-gradient(135deg, var(--primary) 0%, rgba(15,23,42,1) 100%);">
     <div class="container text-center py-4">
-        <h1 class="display-5 fw-bold" data-aos="fade-down">Aspirasi Mahasiswa</h1>
+        <h1 class="display-5 fw-bold" data-aos="fade-down">LAYANAN PENGADUAN</h1>
         <p class="lead text-white-50" data-aos="fade-up" data-aos-delay="100">Suaramu sangat berarti untuk kemajuan kampus tercinta</p>
     </div>
 </div>
@@ -18,11 +18,31 @@
                 <div class="card-body p-5">
                     <div class="text-center mb-5">
                         <i class="bi bi-chat-dots-fill text-secondary fs-1 mb-3 d-inline-block p-3 bg-light rounded-circle"></i>
-                        <h3 class="fw-bold text-dark">Sampaikan Aspirasimu!</h3>
+                        <h3 class="fw-bold text-dark">Sampaikan Pengaduan Anda!</h3>
                         <p class="text-muted">Isi formulir di bawah ini dengan bijak dan bertanggung jawab. Data Anda akan kami lindungi kerahasiaannya.</p>
                     </div>
 
-                    <form action="#" method="POST">
+                    @if(session('success'))
+                        <div class="alert alert-success border-0 shadow-sm rounded-3 mb-4 d-flex align-items-center" role="alert" data-aos="fade-down">
+                            <i class="bi bi-check-circle-fill fs-4 me-3"></i>
+                            <div>
+                                <h6 class="alert-heading fw-bold mb-1">Berhasil!</h6>
+                                <p class="mb-0 small">{{ session('success') }}</p>
+                            </div>
+                        </div>
+                    @endif
+
+                    @if($errors->any())
+                        <div class="alert alert-danger border-0 shadow-sm rounded-3 mb-4" role="alert">
+                            <ul class="mb-0 small">
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+                    <form action="{{ route('aspirasi.store') }}" method="POST">
                         @csrf
                         <div class="row g-3">
                             <div class="col-md-6 mb-3">
@@ -30,9 +50,9 @@
                                 <input type="text" class="form-control form-control-lg bg-light border-0" id="nama" name="nama" placeholder="Boleh dikosongkan/anonim">
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="fakultas" class="form-label fw-bold text-muted">Tujuan Aspirasi (Organisasi) <span class="text-danger">*</span></label>
+                                <label for="fakultas" class="form-label fw-bold text-muted">Nama Instansi <span class="text-danger">*</span></label>
                                 <select class="form-select form-select-lg bg-light border-0" id="fakultas" name="fakultas" required>
-                                    <option value="" selected disabled>Pilih Tujuan Aspirasi...</option>
+                                    <option value="" selected disabled>Pilih Nama Instansi...</option>
                                     
                                     <optgroup label="BEM Tingkat Universitas">
                                         <option value="BEM KM">BEM KM</option>
@@ -112,16 +132,16 @@
                             </div>
                         </div>
                         <div class="mb-4">
-                            <label for="isi_aspirasi" class="form-label fw-bold text-muted">Isi Aspirasi / Keluhan / Saran <span class="text-danger">*</span></label>
+                            <label for="isi_aspirasi" class="form-label fw-bold text-muted">Isi Pengaduan / Keluhan / Saran <span class="text-danger">*</span></label>
                             <textarea class="form-control form-control-lg bg-light border-0" id="isi_aspirasi" name="isi_aspirasi" rows="6" placeholder="Ceritakan permasalahan fasilitas, akademik, atau saran untuk kampus..." required></textarea>
                         </div>
                         
                         <div class="d-grid mt-4">
                             <button type="submit" class="btn btn-custom btn-lg fw-bold py-3">
-                                Kirim Aspirasi <i class="bi bi-send-fill ms-2"></i>
+                                Kirim Pengaduan <i class="bi bi-send-fill ms-2"></i>
                             </button>
                         </div>
-                        <p class="text-center text-muted small mt-3"><i class="bi bi-shield-lock-fill text-success me-1"></i> Data aspirasi Anda dienkripsi dan langsung diterima oleh Komisi II SEMA KM.</p>
+                        <p class="text-center text-muted small mt-3"><i class="bi bi-shield-lock-fill text-success me-1"></i> Data pengaduan Anda dienkripsi dan langsung diterima oleh Sekretaris Jenderal SEMA KM.</p>
                     </form>
                 </div>
             </div>

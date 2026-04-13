@@ -5,7 +5,12 @@ use Illuminate\Support\Facades\Route;
 
 // Public Routes
 Route::get('/', function () {
-    return view('public.home');
+    $latestBerita = App\Models\Berita::with('kategori')
+        ->where('status', 'publish')
+        ->latest()
+        ->take(3)
+        ->get();
+    return view('public.home', compact('latestBerita'));
 })->name('home');
 
 Route::get('/tentang-kami', function () {
@@ -21,7 +26,11 @@ Route::get('/program-kerja', function () {
 })->name('program-kerja');
 
 Route::get('/berita', function () {
-    return view('public.berita');
+    $beritas = App\Models\Berita::with('kategori')
+        ->where('status', 'publish')
+        ->latest()
+        ->paginate(9);
+    return view('public.berita', compact('beritas'));
 })->name('berita');
 
 Route::get('/galeri', function () {

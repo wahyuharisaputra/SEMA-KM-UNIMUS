@@ -14,7 +14,7 @@
             <ul class="list-unstyled lh-lg fs-5 text-muted">
                 <li class="mb-3"><i class="bi bi-geo-alt-fill text-primary me-3 fs-4"></i> Gedung Rektorat UNIMUS Lt. 1</li>
                 <li class="mb-3"><i class="bi bi-envelope-fill text-primary me-3 fs-4"></i> infosema@unimus.ac.id</li>
-                <li class="mb-3"><i class="bi bi-telephone-fill text-primary me-3 fs-4"></i> +62 812 3456 7890</li>
+                <li class="mb-3"><i class="bi bi-telephone-fill text-primary me-3 fs-4"></i> Sekretaris Jenderal: +62 882 0075 55125</li>
             </ul>
         </div>
         <div class="col-lg-6" data-aos="fade-left">

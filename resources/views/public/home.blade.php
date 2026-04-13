@@ -144,41 +144,6 @@
     </div>
 </section>
 
-<!-- Stats Section -->
-<section class="py-5" style="margin-top: -50px; position: relative; z-index: 10;">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
-                    <div class="stat-number">45+</div>
-                    <div class="text-muted fw-bold text-uppercase small mt-2">Pengurus Aktif</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="bi bi-diagram-3-fill"></i></div>
-                    <div class="stat-number">5</div>
-                    <div class="text-muted fw-bold text-uppercase small mt-2">Komisi / Divisi</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="bi bi-calendar2-check-fill"></i></div>
-                    <div class="stat-number">24</div>
-                    <div class="text-muted fw-bold text-uppercase small mt-2">Agenda Organisasi</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
-                    <div class="stat-number">120</div>
-                    <div class="text-muted fw-bold text-uppercase small mt-2">Pengaduan Terserap</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- Sambutan Ketua -->
 <section class="py-5 my-4">
@@ -215,56 +180,6 @@
     </div>
 </section>
 
-<!-- Agenda Unggulan -->
-<section class="py-5" id="program-kerja">
-    <div class="container py-lg-4">
-        <div class="mb-5 text-center" data-aos="fade-up">
-            <h2 class="section-title text-center">Agenda Unggulan</h2>
-            <p class="text-muted max-w-2xl mx-auto">Kami memiliki berbagai program inisiatif untuk mendukung penuh potensi mahasiswa dan memperbaiki eskalasi advokasi kampus.</p>
-        </div>
-        
-        <div class="row g-4">
-            <!-- Dummy Data -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100 border-0 bg-light p-4 rounded-4 hover-shadow transition" style="transition: all .3s;">
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="bg-primary text-white rounded p-3 me-3">
-                            <i class="bi bi-megaphone fs-3"></i>
-                        </div>
-                        <h5 class="fw-bold mb-0 text-dark">Sekolah Legislatif</h5>
-                    </div>
-                    <p class="text-muted">Pendidikan dan pelatihan khusus mengenai advokasi, pergerakan, dan birokrasi kampus untuk membekali calon pemimpin mahasiswa.</p>
-                </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100 border-0 bg-light p-4 rounded-4 hover-shadow transition" style="transition: all .3s;">
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="bg-success text-white rounded p-3 me-3">
-                            <i class="bi bi-search fs-3"></i>
-                        </div>
-                        <h5 class="fw-bold mb-0 text-dark">Serap Aspirasi</h5>
-                    </div>
-                    <p class="text-muted">Kegiatan penyerapan aspirasi secara komprehensif ke organisasi tingkat fakultas dan prodi untuk mengetahui keadaan lapangan sesungguhnya.</p>
-                </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card h-100 border-0 bg-light p-4 rounded-4 hover-shadow transition" style="transition: all .3s;">
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="bg-warning text-dark rounded p-3 me-3">
-                            <i class="bi bi-file-earmark-check fs-3"></i>
-                        </div>
-                        <h5 class="fw-bold mb-0 text-dark">Revisi UU KM</h5>
-                    </div>
-                    <p class="text-muted">Pembahasan, pengkajian, dan amandemen UU kelembagaan KM UNIMUS guna penyelarasan dengan urgensi saat ini.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="text-center mt-5" data-aos="zoom-in">
-            <a href="{{ route('program-kerja') }}" class="btn btn-outline-primary rounded-pill px-4">Lihat Seluruh Agenda</a>
-        </div>
-    </div>
-</section>
 
 <!-- Berita Terbaru -->
 <section class="py-5" style="background-color: var(--light);">
@@ -277,42 +192,35 @@
         </div>
 
         <div class="row g-4 mt-3">
-            <!-- Mockup Article 1 -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            @forelse($latestBerita as $item)
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
                 <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden news-card">
-                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top news-img" alt="News Image">
+                    @if($item->gambar)
+                        <img src="{{ asset('storage/' . $item->gambar) }}" class="card-img-top news-img" alt="{{ $item->judul }}">
+                    @else
+                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top news-img" alt="Default News">
+                    @endif
                     <div class="card-body p-4 bg-white">
-                        <div class="text-muted small mb-2"><i class="bi bi-calendar3 me-1"></i> 10 April 2026</div>
-                        <h5 class="card-title fw-bold text-dark mb-3">Pelantikan Raya Organisasi Mahasiswa UNIMUS 2026 Berlangsung Khidmat</h5>
-                        <p class="card-text text-muted small mb-3">Rektor UNIMUS secara resmi melantik jajaran kepengurusan tingkat universitas, termasuk Senat Mahasiswa (SEMA)...</p>
-                        <a href="#" class="text-secondary fw-bold text-decoration-none small">Baca Selengkapnya <i class="bi bi-arrow-right ms-2"></i></a>
+                        <div class="text-muted small mb-2">
+                            <i class="bi bi-calendar3 me-1"></i> {{ $item->created_at->format('d F Y') }}
+                            @if($item->kategori)
+                                <span class="ms-2 badge bg-light text-primary">{{ $item->kategori->nama }}</span>
+                            @endif
+                        </div>
+                        <h5 class="card-title fw-bold text-dark mb-3">{{ $item->judul }}</h5>
+                        <p class="card-text text-muted small mb-3">{{ Str::limit(strip_tags($item->konten), 120) }}</p>
+                        <a href="{{ route('berita') }}" class="text-secondary fw-bold text-decoration-none small">Baca Selengkapnya <i class="bi bi-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
-            <!-- Mockup Article 2 -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden news-card">
-                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top news-img" alt="News Image">
-                    <div class="card-body p-4 bg-white">
-                        <div class="text-muted small mb-2"><i class="bi bi-calendar3 me-1"></i> 05 April 2026</div>
-                        <h5 class="card-title fw-bold text-dark mb-3">Audiensi SEMA dengan Rektorat Tekait Fasilitas Kampus Terpadu</h5>
-                        <p class="card-text text-muted small mb-3">SEMA KM UNIMUS berhasil mengawal perbaikan fasilitas ruang kelas dan tempat ibadah melalui mekanisme...</p>
-                        <a href="#" class="text-secondary fw-bold text-decoration-none small">Baca Selengkapnya <i class="bi bi-arrow-right ms-2"></i></a>
-                    </div>
+            @empty
+            <div class="col-12 text-center py-5" data-aos="fade-up">
+                <div class="mb-3">
+                    <i class="bi bi-newspaper text-muted opacity-25" style="font-size: 4rem;"></i>
                 </div>
+                <p class="text-muted fs-5">Belum ada berita yang diterbitkan saat ini.</p>
             </div>
-            <!-- Mockup Article 3 -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden news-card">
-                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top news-img" alt="News Image">
-                    <div class="card-body p-4 bg-white">
-                        <div class="text-muted small mb-2"><i class="bi bi-calendar3 me-1"></i> 02 April 2026</div>
-                        <h5 class="card-title fw-bold text-dark mb-3">Open Recruitment Staff Magang SEMA KM Tahun 2026 Resmi Dibuka</h5>
-                        <p class="card-text text-muted small mb-3">Kesempatan bagi mahasiswa baru lintas program studi untuk bergabung mempelajari pergerakan legislatif mahasiswa...</p>
-                        <a href="#" class="text-secondary fw-bold text-decoration-none small">Baca Selengkapnya <i class="bi bi-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-            </div>
+            @endforelse
         </div>
     </div>
 </section>
